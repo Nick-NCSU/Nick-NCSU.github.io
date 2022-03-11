@@ -1,24 +1,116 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container, Grid } from '@mui/material';
+import JSLogo from './images/JS.png'
+import MongoDBLogo from './images/MongoDB.png'
+import ReactLogo from './images/React.png'
+import CSharpLogo from './images/CSharp.png'
+import NodeJSLogo from './images/NodeJS.png'
+import DetailCard from './components/DetailCard';
+import { GitHub, Link } from '@mui/icons-material';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={6} lg={4}>
+          <DetailCard details={{
+            title: "SRC-Bot",
+            description: "Node.js Discord bot which utilizes REST API from multiple websites. Uses MongoDB to store data and runs using Heroku.",
+            technologies: [
+              {
+                name: "Node.js",
+                img: NodeJSLogo
+              },
+              {
+                name: "MongoDB",
+                img: MongoDBLogo
+              }
+            ],
+            links: [
+              {
+                icon: GitHub,
+                name: "GitHub",
+                url: "https://github.com/Nick-NCSU/hpbot"
+              }
+            ]
+          }}/>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <DetailCard details={{
+            title: "Retime",
+            description: "React/Material-UI app used to find elapsed time between two points on a YouTube video.",
+            technologies: [
+              {
+                name: "React",
+                img: ReactLogo
+              },
+              {
+                name: "JavaScript",
+                img: JSLogo
+              }
+            ],
+            links: [
+              {
+                icon: Link,
+                name: "Page",
+                url: "https://nick-ncsu.github.io/retime/"
+              },
+              {
+                icon: GitHub,
+                name: "GitHub",
+                url: "https://github.com/Nick-NCSU/retime"
+              }
+            ]
+          }}/>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <DetailCard details={{
+            title: "Portfolio",
+            description: "This website built in React and Material-UI.",
+            technologies: [
+              {
+                name: "React",
+                img: ReactLogo
+              },
+              {
+                name: "JavaScript",
+                img: JSLogo
+              }
+            ],
+            links: [
+              {
+                icon: GitHub,
+                name: "GitHub",
+                url: "https://github.com/Nick-NCSU/Nick-NCSU.github.io"
+              }
+            ]
+          }}/>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <DetailCard details={{
+            title: "MoreStaves",
+            description: "Mod for Terraria developed in C# complete with 20+ items, custom AI projectiles, and a full wiki.",
+            technologies: [
+              {
+                name: "C#",
+                img: CSharpLogo
+              }
+            ],
+            links: [
+              {
+                icon: Link,
+                name: "Wiki",
+                url: "https://github.com/Nick-NCSU/MoreStaves/wiki"
+              },
+              {
+                icon: GitHub,
+                name: "GitHub",
+                url: "https://github.com/Nick-NCSU/MoreStaves"
+              }
+            ]
+          }}/>
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
 
