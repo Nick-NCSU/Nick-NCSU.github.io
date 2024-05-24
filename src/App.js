@@ -1,9 +1,10 @@
 import { Container, Grid } from '@mui/material';
-import JSLogo from './images/JS.png'
-import MongoDBLogo from './images/MongoDB.png'
-import ReactLogo from './images/React.png'
-import CSharpLogo from './images/CSharp.png'
-import NodeJSLogo from './images/NodeJS.png'
+import JSLogo from './images/JS.png';
+import MongoDBLogo from './images/MongoDB.png';
+import ReactLogo from './images/React.png';
+import CSharpLogo from './images/CSharp.png';
+import NodeJSLogo from './images/NodeJS.png';
+import TSLogo from './images/TS.png';
 import DetailCard from './components/DetailCard';
 import { GitHub, Link } from '@mui/icons-material';
 
@@ -19,6 +20,14 @@ function App() {
               {
                 name: "React",
                 img: ReactLogo
+              },
+              {
+                name: "TypeScript",
+                img: TSLogo
+              },
+              {
+                name: "Node.js",
+                img: NodeJSLogo
               }
             ],
             links: [
@@ -41,19 +50,55 @@ function App() {
             description: "Node.js Discord bot which utilizes REST API from multiple websites. Uses MongoDB to store data and runs using Heroku.",
             technologies: [
               {
+                name: "JavaScript",
+                img: JSLogo
+              },
+              {
                 name: "Node.js",
                 img: NodeJSLogo
               },
               {
                 name: "MongoDB",
                 img: MongoDBLogo
-              }
+              },
             ],
             links: [
               {
                 icon: GitHub,
                 name: "GitHub",
                 url: "https://github.com/Nick-NCSU/hpbot"
+              }
+            ]
+          }}/>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <DetailCard details={{
+            title: "The Poller",
+            description: "Site to automatically fetch a team's GitHub PRs and display in a user-friendly table.",
+            technologies: [
+              {
+                name: "React",
+                img: ReactLogo
+              },
+              {
+                name: "TypeScript",
+                img: TSLogo
+              },
+              {
+                name: "Node.js",
+                img: NodeJSLogo
+              }
+            ],
+            links: [
+              {
+                icon: Link,
+                name: "Page",
+                url: "https://the-poller.github.io/the-poller/"
+              },
+              {
+                icon: GitHub,
+                name: "GitHub",
+                url: "https://github.com/The-Poller/the-poller"
               }
             ]
           }}/>
@@ -70,6 +115,10 @@ function App() {
               {
                 name: "JavaScript",
                 img: JSLogo
+              },
+              {
+                name: "Node.js",
+                img: NodeJSLogo
               }
             ],
             links: [

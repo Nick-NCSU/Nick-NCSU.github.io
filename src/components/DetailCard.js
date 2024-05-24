@@ -1,47 +1,45 @@
-import React from 'react'
-import { Card, CardContent, CardHeader, Grid, ImageList, ImageListItem, ImageListItemBar, SvgIcon, Typography } from '@mui/material'
+import React from 'react';
+import { Card, CardContent, CardHeader, Container, Grid, Typography } from '@mui/material';
+import { GitHub, Link } from '@mui/icons-material';
 
 export default function DetailCard({ details }) {
     return (
-        <div>
-            <Card>
-                <CardHeader 
+        <Card className="detail-card">
+            <CardHeader 
                 title={details.title}
-                />
-                <CardContent>
-                    <Grid container>
-                        <Grid item sm={6}>
-                            <Typography>
-                                {details.description}
-                            </Typography>
-                        </Grid>
-                        <Grid item sm={6}>
-                            <ImageList>
-                                {details.technologies.map((technology) => 
-                                    <ImageListItem key={technology.name}>
-                                        <img src={technology.img} alt={technology.name} style={{ width: "100%", maxHeight: 30, objectFit: "contain" }} />
-                                        <ImageListItemBar title={technology.name} position="below" align="center" />
-                                    </ImageListItem>
-                                )}
-                            </ImageList>
-                        </Grid>
+                className="card-header"
+            />
+            <CardContent className="card-content">
+                <Typography variant="body1" className="description">
+                    {details.description}
+                </Typography>
+                <Grid container justifyContent="space-between">
+                    <Grid item>
+                        <div className="technologies-container">
+                            {details.technologies.map((technology, index) => (
+                                <div key={index} className="technology">
+                                    <img src={technology.img} alt={technology.name} className="technology-img" />
+                                    <Typography variant="body2" className="technology-name">
+                                        {technology.name}
+                                    </Typography>
+                                </div>
+                            ))}
+                        </div>
                     </Grid>
-                </CardContent>
-                <CardContent>
-                    <Grid container spacing={2}>
-                        {details.links.map((link) => 
-                            <Grid item key={link.name}>
-                                <a href={link.url}>
-                                    <SvgIcon component={link.icon} />
+                    <Grid item>
+                        <div className="links-container">
+                            {details.links.map((link, index) => (
+                                <a key={index} href={link.url} className="link">
+                                    {link.icon === Link ? <Link className="link-icon" /> : <GitHub className="link-icon" />}
+                                    <Typography variant="body2" className="link-text">
+                                        {link.name}
+                                    </Typography>
                                 </a>
-                                <Typography>
-                                    {link.name}
-                                </Typography>
-                            </Grid>
-                        )}
+                            ))}
+                        </div>
                     </Grid>
-                </CardContent>
-            </Card>
-        </div>
-    )
+                </Grid>
+            </CardContent>
+        </Card>
+    );
 }
