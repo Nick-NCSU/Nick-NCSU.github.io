@@ -13,6 +13,30 @@ function App() {
       <Grid container spacing={3}>
         <Grid item xs={12} md={6} lg={4}>
           <DetailCard details={{
+            title: "BF Interpreter",
+            description: "Interpreter for esoteric language brainfuck. Provides helpful debugging features and output formats.",
+            technologies: [
+              {
+                name: "React",
+                img: ReactLogo
+              }
+            ],
+            links: [
+              {
+                icon: Link,
+                name: "Page",
+                url: "https://nick-ncsu.github.io/bf/"
+              },
+              {
+                icon: GitHub,
+                name: "GitHub",
+                url: "https://github.com/Nick-NCSU/bf"
+              }
+            ]
+          }}/>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <DetailCard details={{
             title: "SRC-Bot",
             description: "Node.js Discord bot which utilizes REST API from multiple websites. Uses MongoDB to store data and runs using Heroku.",
             technologies: [
