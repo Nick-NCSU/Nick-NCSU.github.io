@@ -43,7 +43,7 @@ function App() {
                 {
                   icon: Link,
                   name: "Page",
-                  url: "https://nick-ncsu.github.io/bf/"
+                  url: "https://thompson.cx/bf/"
                 },
                 {
                   icon: GitHub,
@@ -134,7 +134,7 @@ function App() {
                 {
                   icon: Link,
                   name: "Page",
-                  url: "https://nick-ncsu.github.io/retime/"
+                  url: "https://tokkumu.com/retime/"
                 },
                 {
                   icon: GitHub,
@@ -147,7 +147,7 @@ function App() {
           <Grid item xs={12} md={6} lg={4}>
             <DetailCard details={{
               title: "Portfolio",
-              description: "This website built in React and Material-UI.",
+              description: "This website, built in React and Material-UI.",
               technologies: [
                 {
                   name: "React",
