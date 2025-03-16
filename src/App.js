@@ -9,14 +9,9 @@ import DetailCard from './components/DetailCard';
 import { GitHub, Link } from '@mui/icons-material';
 import ReactGA from 'react-ga4';
 
+ReactGA.initialize('G-1E2WKQ764W');
+
 function App() {
-  ReactGA.initialize('G-1E2WKQ764W');
-  ReactGA.send({
-    hitType: 'pageview',
-    page: '/',
-    title: 'Portfolio',
-  });
-  
   return (
     <Container>
       <Box className='box-center'>
